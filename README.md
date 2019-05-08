@@ -12,23 +12,23 @@ A more detailed description of the content of either back- or frontend can be fo
 *  [Backend Readme.md](eventsourcing-backend/README.md)
 *  [Frontend Readme.md](eventsourcing-frontend/README.md)
 
-### Backend
+#### Backend
 The backend part is based on Akka's actor system, Akka Streams and Akka Http.
 
-### Frontend
+#### Frontend
 In order to demonstrate the eventsourcing pattern also in the frontend, we use Redux in combination with Angular.
 
-### Hints
-You should be able to run the example i.e. both parts "as is" i.e. without installing and setting up additional libs or middleware.
+## Run instruction hints
+You should be able to run the example (both parts) "as is", i.e. without installing and setting up additional libs or middleware.
 However you should consider some hints in order to get this example running without problems:
 
 #### Backend
-* Use Java 11 to run the example
+* Use Java 11 as runtime for this example
 * Either the Lombok plugin should be installed or lombok's annotation processor should be configured in your IDE 
   to avoid compile time errors. Although I'm not a fan of this kind of code generation it makes the code more clear here 
   and strips it down to the essential. 
-* So that we can simulate an inbound command source (without additional middleware) we use the file `resources/verkehrsmittel.csv`
-  acting as an inbound command source which streams commands to the backend; one line means one single command.
+* So that we can simulate an inbound streaming source (without additional middleware) we use the file `resources/verkehrsmittel.csv`
+  acting as an inbound command source which continuously streams commands to the backend; one line here means a single command.
   Copy the file outside of your workspace (IDE) to avoid the circumstance, that your IDE will continuously scan or index it.
   The new file path must be configured in the `resources/application.conf` under the key `eventsourcing.command-file.path`(file system path, not class path!)
 * Make sure your copy of the file is encoded in utf-8 and you use the right line feeds depending on your os (windows: CR LF, *nix: LF)
@@ -41,7 +41,7 @@ However you should consider some hints in order to get this example running with
 * If you wanna play around with the event store and the events in the frontend you could install the Redux Dev-Tools Extensions (for Chrome, FF, Edge).
   Have fun!
   
-  
-Please don't hesitate to ask if something isn't clear or if you have a question about it.
+## Questions / Pull Requests
+**Please don't hesitate to ask** if something is not clear to you or if you have a specific question about it.
 Or place a pull request if you've found a bug or have some improvements you wanna share with us.
 

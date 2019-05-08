@@ -12,9 +12,9 @@ Here you'll find the backend part of the example based on Akka's actor system, A
 * `WebsocketActor` - handles the communication between a client and the backend, acting as a bridge which streams the
   events from backend to client and forwards user actions to the appropriate backend actor which can handle them.
   
-### Run instructions:
+### Run instruction hints:
 * If you'll run this example please make sure that you use Java 11 as runtime
-* Please make sure you have installed the lombok plugin in order to eliminate compile time errors!
+* Please make sure you have installed the lombok plugin or its annotation processor(s) in order to eliminate compile time errors!
 * Copy the ["verkehrsmittel.csv"](src/main/resources/inbound/verkehrsmittel.csv) command file (UTF-8) out of your workspace
   and adjust the file path in `resources/application.conf` under the key `eventsourcing.command-file.path`(file system path, not class path!)
   The file should have line feeds that correspond to your os (windows CR LF, linux LF).
@@ -26,6 +26,4 @@ This eventsoucing example uses a [FileTailSource (Akka Alpakka)](https://doc.akk
 to simulate an inbound command source (e.g. message queue or the like). If you manually append a new line aka. command to the `verkehrsmittel.csv` file
 (incl. line feed at the end) while the app is running, you should see the command being processed by the VerkehrsmittelActor and instantly being pushed to the frontend.
 This way you can simulate new commands flowing into the system from outside..
-
-Some slides about the theory in general e.g. reactive programming, eventsourcing and actor systems: [handson-eventsourcing-cqrs.pptx](handson-eventsourcing-cqrs.pptx) 
 
