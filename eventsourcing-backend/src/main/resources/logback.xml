@@ -1,0 +1,18 @@
+<configuration>
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<!-- logging pattern
+			see https://confluence.sbb.ch/display/ESTA/2.5%29+Logging+und+Korrelation
+			https://confluence.sbb.ch/x/uV9aKw -->
+			<pattern>[%d] [%t] %level %logger{10} - corid=%X{akkaSource} - %m%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- logger for our own classes and actors -->
+	<logger name="ch.sbb.eventsourcing" level="DEBUG"></logger>
+
+	<!-- root logger (for all levels, except it is overridden) -->
+	<root level="INFO">
+		<appender-ref ref="STDOUT"/>
+	</root>
+</configuration>

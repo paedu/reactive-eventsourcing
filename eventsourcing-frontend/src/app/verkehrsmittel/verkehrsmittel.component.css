@@ -1,0 +1,29 @@
+
+table, title, h2, .no-data{
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  background-color: dimgray;
+  color: white;
+  padding: 8px;
+}
+
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.user {
+  font-family: arial, sans-serif;
+}
+

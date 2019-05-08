@@ -1,0 +1,28 @@
+<div class="title">
+  <h2>Verkehrsmittel</h2>
+  <div class="user">User: {{ user$ | async }}</div>
+</div>
+
+<div >
+  <table border="1px">
+    <tr>
+      <th>Nummer</th>
+      <th>Art</th>
+      <th>Bezeichnung</th>
+      <th>Verspätung</th>
+      <th>Position</th>
+      <th>Fahrtpunkte</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let vm of verkehrsmittel$ | async" >
+      <td>{{vm.vmNummer}}</td>
+      <td>{{vm.vmArt}}</td>
+      <td>{{vm.bezeichnung}}</td>
+      <td>{{vm.delay}}</td>
+      <td>{{vm.aktuellePosition}}</td>
+      <td>{{vm.fahrtpunkte}}</td>
+      <td nowrap><span><input type="button" value="Delay" (click)="delayVerkehrsmittel(vm.vmNummer, delay.value)"><input type="text" #delay value=""></span></td>
+    </tr>
+  </table>
+</div>
+

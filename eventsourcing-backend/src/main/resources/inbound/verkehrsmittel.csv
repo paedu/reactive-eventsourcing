@@ -1,0 +1,19 @@
+CreateVerkehrsmittel,711,ICN,St.Gallen-Genf Flughafen,SG;W;WI;ZFH;ZUE;AA;OL;BN;FR;LS;GE;GEAP
+CreateVerkehrsmittel,713,ICN,St.Gallen-Genf Flughafen,SG;W;WI;ZFH;ZUE;AA;OL;BN;FR;LS;GE;GEAP
+CreateVerkehrsmittel,715,ICN,St.Gallen-Genf Flughafen,SG;W;WI;ZFH;ZUE;AA;OL;BN;FR;LS;GE;GEAP
+CreateVerkehrsmittel,34,IR,Zürich Flughafen-Basel SBB,ZFH;ZOE;ZUE;ZAS;DI;BA;BRG;FRI;RHF;BS
+CreateVerkehrsmittel,720,ICN,St.Gallen-Genf Flughafen,SG;W;WI;ZFH;ZUE;AA;OL;BN;FR;LS;GE;GEAP
+CreateVerkehrsmittel,75,IR,Konstanz-Luzern,KO;KR;WE;FF;W;ZFH;ZUE;TH;BAA;ZG;RK;LU
+CreateVerkehrsmittel,36,IR,Zürich Flughafen-Basel SBB,ZFH;ZOE;ZUE;ZAS;DI;BA;BRG;FRI;RHF;BS
+CreateVerkehrsmittel,77,IR,Konstanz-Luzern,KO;KR;WE;FF;W;ZFH;ZUE;TH;BAA;ZG;RK;LU
+MoveVerkehrsmittel,711,WI
+MoveVerkehrsmittel,713,ZFH
+MoveVerkehrsmittel,713,AA
+MoveVerkehrsmittel,713,AA
+MoveVerkehrsmittel,715,AA
+MoveVerkehrsmittel,715,OL
+MoveVerkehrsmittel,34,ZAS
+CreateVerkehrsmittel,666,IC,Bern-Zürich,BN;ZUE
+CreateVerkehrsmittel,667,IC,Bern-Zürich,BN;ZUE
+CreateVerkehrsmittel,668,IC,Bern-Zürich,BN;ZUE
+MoveVerkehrsmittel,667,BN
